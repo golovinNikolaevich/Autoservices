@@ -1,7 +1,26 @@
+@font-face {
+	src: url('../fonts/capture.ttf');
+	font-family: 'Capture';
+}
+
+
 /*
 	1. Navigation
 	2. Carousel
+	3. About
 */
+
+body {
+	animation: all .5s linear;
+  color: #8b8b8b;
+  overflow-x: hidden;
+}
+
+@keyframes all {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
 // Navigation
 
 .contacts-header {
@@ -9,20 +28,39 @@
   right: 0;
   position: fixed;
   z-index: 1;
-  color: #fff8f8;
-  background: rgba(142, 177, 230, 0.77);
+  color: black;
+  background: white;
   &__number,
   &__email {
   	padding-left: 45px;
   }
   &__number,
   &__email {
-  	border-right: .4px solid rgba(255, 255, 255, 0.28);
-  	border-bottom: .4px solid rgba(255, 255, 255, 0.28);
+  	border-right: .4px solid rgba(220, 220, 220, 0.62);
+  	border-bottom: .4px solid rgba(220, 220, 220, 0.62);
+  }
+  &__email a {
+  	color: black;
   }
   &__social {
-  	border-bottom: 0.4px solid rgba(255, 255, 255, 0.63);
+  	border-bottom: .4px solid rgba(220, 220, 220, 0.62);
   }
+}
+
+.contacts-header__social {
+	.facebook,
+	.instagram {
+		width: 30px;
+    height: 20px;
+    margin-top: 2px;
+    display: inline-block;
+	}
+	.facebook {
+		background: url('../img/facebook.svg') no-repeat center;
+	}
+	.instagram {
+		background: url('../img/instagram.svg') no-repeat center;
+	}
 }
 
 .phone:before,
@@ -63,6 +101,11 @@
 	top: -25px;
 }
 
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 .img-carousel {
   max-height: 615px;
   min-height: 615px;
@@ -70,9 +113,18 @@
 	object-fit: cover;
 }
 
-.img {
-	min-height: 262px;
-  object-fit: cover;
+.purchase-block {
+	text-align: center;
+	&__img {
+		margin-bottom: 20px;
+		max-width: 150px;
+	}
+	h5 {
+    word-wrap: break-word;
+	}
+	p {
+		font-size: .9rem;
+	}
 }
 
 .rainbow-roller {
@@ -82,13 +134,53 @@
 .hideUp {
   min-height: 0;
   height: 35px;
-  top: 24px;
+  top: 27px;
   background: rgba(0, 0, 0, 0.89);
+  animation: all .3s linear;
+}
+
+.detail-block {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  max-width: 450px;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 4px #000;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.51);
+  h2 {
+  	font-family: 'Capture';
+  }
+  h2:first-letter {
+  	color: orange;
+  }
+  p {
+		font-size: 1.2rem;
+  }
+}
+
+// About
+.block-about {
+	margin-bottom: 15px;
+	text-align: center;
+	a {
+		border: 2px solid #b1b1b1;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #000;
+    &:hover {
+			text-decoration: none;
+    }
+	}
 }
 
 @media screen and (max-width: 767px) {
-	.img {
-		min-height: 115px;
+	.purchase {
+		margin-bottom: 5px;
 	}
 
 	.navbar {
@@ -104,7 +196,7 @@
 @media screen and (max-width: 575px) {
 		
 	.navbar {
-		top: 73px;
+		top: 77px;
 	}
 
 	.hideUp {

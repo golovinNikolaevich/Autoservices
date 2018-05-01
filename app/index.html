@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- General style -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- WOWJS style -->
+    <link rel="stylesheet" href="css/animate.css">
     <title>Autoservices</title>
   </head>
   <body>
@@ -19,7 +22,10 @@
 	    				<div class="col-sm-6 contacts-header__email">
 	    					<a href="mailto:info@company.com">info@company.com</a>
 	    				</div>
-	    				<div class="col-sm-2 contacts-header__social">sss</div>
+	    				<div class="col-sm-2 contacts-header__social">
+	    					<a class="facebook" href="#"></a>
+	    					<a class="instagram" href="#"></a>
+	    				</div>
 	    			</div>
 	    			<div class="row">
 	    				<nav class="col rainbow-roller navbar navbar-expand-md navbar-dark">
@@ -30,10 +36,10 @@
 							    <a class="navbar-brand" href="#">Autoservices-logo</a>
 							    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 							      <li class="nav-item">
-							        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+							        <a class="nav-link" href="#">Home</a>
 							      </li>
 							      <li class="nav-item">
-							        <a class="nav-link" href="#">Link</a>
+							        <a class="nav-link" href="#">Услуги</a>
 							      </li>
 							      <li class="nav-item">
 							        <a class="nav-link" href="#">Disabled</a>
@@ -44,15 +50,27 @@
 	    			</div>
 	    			<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 						  <div class="carousel-inner">
-						    <div class="carousel-item active">
-						      <img class="img-carousel d-block w-100" src="http://vdvizhenii23.ru/images/service/service.jpg" alt="First slide">
-						    </div>
-						    <div class="carousel-item">
-						      <img class="img-carousel d-block w-100" src="https://www.radan-az.lviv.ua/wp-content/uploads/2017/06/radan-avtoservice.jpg.pagespeed.ce.viCgQNkZVg.jpg" alt="Second slide">
-						    </div>
-						    <div class="carousel-item">
-						      <img class="img-carousel d-block w-100" src="https://static.wixstatic.com/media/dd8e6e_4755c3cdf42f450bbbd6581b6a0d61e6~mv2.jpg/v1/fill/w_626,h_418/dd8e6e_4755c3cdf42f450bbbd6581b6a0d61e6~mv2.jpg" alt="Third slide">
-						    </div>
+						    <a class="carousel-item active" href="#">
+						      <img class="img-carousel d-block w-100" src="https://a.d-cd.net/43f7d79s-1920.jpg" alt="First slide">
+						      <div class="detail-block">
+						      	<h2>Рихтовка сварка.</h2>
+						      	<p>Антикоррозийная обработка,  шумо - виброизоляция.</p>
+						      </div>
+						    </a>
+						    <a class="carousel-item" href="#">
+						      <img class="img-carousel d-block w-100" src="img/slide_2.jpg" alt="Second slide">
+						      <div class="detail-block">
+						      	<h2>Заголовок</h2>
+						      	<p>Детали детали детали детали детали детали детали детали детали детали.</p>
+						      </div>
+						    </a>
+						    <a class="carousel-item" href="#">
+						      <img class="img-carousel d-block w-100" src="http://xn----8sbgaldrfm2aqzlebh8b.xn--p1ai/assets/img/sezon.jpg" alt="Third slide">
+						      <div class="detail-block">
+						      	<h2>Заголовок</h2>
+						      	<p>Детали детали детали детали детали детали детали детали детали детали.</p>
+						      </div>
+						    </a>
 						  </div>
 						  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
 						    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -67,34 +85,45 @@
 	    	</div>
 			</div>
     </div>
-    <section class="first-section">
+    <section class="purchace-section">
     	<div class="container">
     		<div class="row">
-    			<div class="col">
-    				<h1 class="text-center">Lorem Ipsum</h1>
+    			<div class="col block-about">
+    				<h1 class="text-center">Автосервис на троещине</h1>
+    				<p>Автосервис имеет большой опыт ремонта и обслуживания автомобилей в Киеве. Команда профессионалов нашего автосервиса выявит и устранит широкий спектр технических неисправностей. Автосервис на троещине, Вы можете приобрести масла и автохимию по оптовым ценам, а также заказать необходимые для ремонта комплектующие.</p>
+    				<a class="wow tada" data-wow-duration="1s" data-wow-offset="200" href="#">Связаться с нами</a>
     			</div>
     		</div>
     		<div class="row">
     			<div class="col-sm-4">
-    				<div class="feature-md">
-    					<img class="w-100 img-fluid img" src="img/man_1.jpg" alt="">
-    					<h5>Lorem ipsum</h5>
-    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, dolorem? Magni, at facere voluptatem similique ipsam odit qui maxime nulla.</p>
+    				<div class="feature-md purchase-block wow slideInLeft" data-wow-duration=".5s" data-wow-offset="100">
+    					<img class="w-100 img-fluid purchase-block__img" src="img/clock.svg" alt="">
+    					<h5>Экономим Ваше время</h5>
+    					<p>Мы стараемся делать все работы максимально качественно и быстро</p>
     				</div>
     			</div>
     			<div class="col-sm-4">
-    				<div class="feature-md">
-    					<img class="w-100 img-fluid img" src="img/man_2.jpg" alt="">
-    					<h5>Lorem ipsum</h5>
-    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dignissimos enim sunt maiores dolorum esse neque harum. Tenetur, blanditiis, excepturi.</p>
+    				<div class="feature-md purchase-block wow bounceIn" data-wow-duration=".8s" data-wow-offset="100">
+    					<img class="w-100 img-fluid purchase-block__img" src="img/thought.svg" alt="">
+    					<h5>Профессиональный персонал</h5>
+    					<p>Все сотрудники нашего автосервиса - специалисты высокого класса с большим опытом работы</p>
     				</div>
     			</div>
     			<div class="col-sm-4">
-    				<div class="feature-md">
-    					<img class="w-100 img-fluid img" src="img/man_3.jpg" alt="">
-    					<h5>Lorem ipsum</h5>
-    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eum ducimus voluptate reiciendis dolores libero ipsa impedit eligendi, laborum aut.</p>
+    				<div class="feature-md purchase-block wow slideInRight" data-wow-duration=".5s" data-wow-offset="100">
+    					<img class="w-100 img-fluid purchase-block__img" src="img/financial.svg" alt="">
+    					<h5>Бережем Ваши деньги</h5>
+    					<p>Мы ценим деньги клиентов и работаем честно, без наценок и переплат</p>
     				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <section class="service-section">
+    	<div class="container-fluid">
+    		<div class="row">
+    			<div class="col">
+    				<h1 class="text-center">Все услуги в автосервисе на троещине</h1>
     			</div>
     		</div>
     	</div>
@@ -105,6 +134,19 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <script src="js/wow.min.js"></script>
+    <script>
+    	   wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+    </script>
     <script>
     	$(window).scroll(function(){var height=$(window).scrollTop();if(height>30){$('.rainbow-roller').addClass('hideUp');}else{$('.rainbow-roller').removeClass('hideUp');}});
     </script>
