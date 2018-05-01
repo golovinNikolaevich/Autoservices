@@ -1,4 +1,113 @@
-* {
-	margin: 0;
-	padding: 0;
+/*
+	1. Navigation
+	2. Carousel
+*/
+// Navigation
+
+.contacts-header {
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+  color: #fff8f8;
+  background: rgba(142, 177, 230, 0.77);
+  &__number,
+  &__email {
+  	padding-left: 45px;
+  }
+  &__number,
+  &__email {
+  	border-right: .4px solid rgba(255, 255, 255, 0.28);
+  	border-bottom: .4px solid rgba(255, 255, 255, 0.28);
+  }
+  &__social {
+  	border-bottom: 0.4px solid rgba(255, 255, 255, 0.63);
+  }
+}
+
+.phone:before,
+.contacts-header__email:before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 20px;
+  top: 4px;
+  width: 25px;
+  height: 17px;
+  background: url(../img/phone.svg) center center no-repeat;
+}
+
+.contacts-header__email:before {
+  background: url(../img/email.svg) center center no-repeat;
+}
+
+.navbar {
+  position: fixed;
+  top: 73px;
+  z-index: 999;
+  background: rgba(72, 71, 71, 0.92);
+  box-shadow: 0 0 3px #00000069;
+}
+
+.nav-link {
+	color: white !important;
+}
+
+.nav-link:hover {
+	color: black !important;
+}
+
+// Carousel
+.carousel {
+	margin: 0 -15px;
+	top: -25px;
+}
+
+.img-carousel {
+  max-height: 615px;
+  min-height: 615px;
+  height: 100%;
+	object-fit: cover;
+}
+
+.img {
+	min-height: 262px;
+  object-fit: cover;
+}
+
+.rainbow-roller {
+	transition: top 0.2s linear, height 1s linear, background 1s linear;
+}
+
+.hideUp {
+  min-height: 0;
+  height: 35px;
+  top: 24px;
+  background: rgba(0, 0, 0, 0.89);
+}
+
+@media screen and (max-width: 767px) {
+	.img {
+		min-height: 115px;
+	}
+
+	.navbar {
+		top: 24px;
+	}
+
+	.hideUp {
+    min-height: auto;
+    height: auto;
+	}
+}
+
+@media screen and (max-width: 575px) {
+		
+	.navbar {
+		top: 73px;
+	}
+
+	.hideUp {
+
+	}
 }
